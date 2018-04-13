@@ -1,0 +1,8 @@
+.App {
+    /* 31D */
+    --main-display: grid;
+}
+.App {
+    /* 31C */
+    display: var(--main-display);
+}

@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
+import store from "./store";
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { HashRouter } from 'react-router-dom';
+
 
 ReactDOM.render(
 
-<App />
+    <Provider store={store}>
+        <HashRouter>
+            <App />
+        </HashRouter>
+    </Provider>
 
-, document.getElementById('root'));
+    , document.getElementById('root'));
 registerServiceWorker();
